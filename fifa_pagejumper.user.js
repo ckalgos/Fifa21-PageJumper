@@ -2,7 +2,7 @@
 // @name         FUT 21 Jumper with TamperMonkey
 // @namespace    http://tampermonkey.net/
 // @version      1.0.0
-// @updateURL    https://github.com/chithakumar13/Fifa21-PageJumper/blob/master/jumper.user.js
+// @updateURL    https://github.com/chithakumar13/Fifa21-PageJumper/blob/master/fifa_pagejumper.user.js
 // @description  FUT Page Jumper
 // @author       CK Algos
 // @match        https://www.ea.com/*/fifa/ultimate-team/web-app/*
