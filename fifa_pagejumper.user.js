@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         FUT 21 Jumper with TamperMonkey
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @updateURL    https://github.com/chithakumar13/Fifa21-PageJumper/blob/master/fifa_pagejumper.user.js
 // @description  FUT Page Jumper
 // @author       CK Algos
@@ -53,12 +53,12 @@
                     if (!this._stadiumViewmodel || this._searchCriteria.type !== SearchType.VANITY && this._searchCriteria.type !== SearchType.CLUB_INFO && this._searchCriteria.type !== SearchType.BALL || (r = this._stadiumViewmodel.getStadiumProgression(this._searchCriteria.subtypes)),
                         s.setItems(this._paginationViewModel.getCurrentPageItems(), r),
                         s.setPaginationState(1 < l, t.data.items.length > i),
-                        utils.JS.isValid(this._compareItem) && !this._squadContext) {
-                        var a = utils.JS.find(o, function (e) {
+                        JSUtils.isValid(this._compareItem) && !this._squadContext) {
+                        var a = JSUtils.find(o, function (e) {
                             return e.getAuctionData().tradeId === this._compareItem.getAuctionData().tradeId
                         }
                             .bind(this));
-                        utils.JS.isValid(a) ? this._pinnedListItem.setItem(a) : this._paginationViewModel.setPinnedItem(this._compareItem)
+                        JSUtils.isValid(a) ? this._pinnedListItem.setItem(a) : this._paginationViewModel.setPinnedItem(this._compareItem)
                     } else
                         !isPhone() && 0 < o.length && s.selectListRow(this._paginationViewModel.getCurrentItem().id)
                 }
@@ -71,7 +71,7 @@
         this._jsClassName = 'UTSnipeFilterViewController';
     };
 
-    utils.JS.inherits(UTSnipeFilterViewController, UTAppSettingsViewController);
+    JSUtils.inherits(UTSnipeFilterViewController, UTAppSettingsViewController);
 
     window.jumperInterface = function () {
         if (services.Localization && jQuery('h1.title').html() === services.Localization.localize("navbar.label.home")) {
